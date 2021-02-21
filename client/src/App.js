@@ -31,14 +31,19 @@ const handleSingle = (id) => {
 }
 */
       return (   
-    <div>  
-      <ul>
+        <>
+          <header><h1>reviews</h1></header> 
+    <div className="main-container">
+    
+       
+      <ul class="thumbnails-container">
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
         {layoutData && <CardContainer setActive={setActive} isActive={isActive}  setSingle={setSingle} layoutData={layoutData} setNewLayoutData={setNewLayoutData} />}
       </ul>
        {isActive && <SideBar newLayoutData={newLayoutData} isActive={isActive} setActive={setActive} single={single} />} 
     </div>
+    </>
 )
 
 }

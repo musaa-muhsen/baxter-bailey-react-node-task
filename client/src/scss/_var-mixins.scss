@@ -9,6 +9,14 @@ $greyMed: #707070;
 $greyDark: #212121;
 $black: #000;
 
+$p9: 0.9;
+$p8: 0.8;
+$p7: 0.7;
+$p6: 0.6;
+$p5: 0.5;
+$p4: 0.4;
+$p3: 0.3;
+
 @mixin mobile {
 	@media all and (max-width: 1700px)  {
        @content;

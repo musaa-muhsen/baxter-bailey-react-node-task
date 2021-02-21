@@ -34,10 +34,11 @@ const CardContainer = ({layoutData, setActive, isActive, setNewLayoutData, setSi
         {
             layoutData.map((el, index) => (
                 <li onClick={() => handleClick(index)} className="card-container" id={index} key={index}>
-
+                  <div>
                      <img src={require(`./images/${el.imageSrc}`)} alt={el.imageSrc}/>
-                     <p>{el.name}</p>
-                     <button>read review</button>
+                     <div className="name"><p>{el.name}</p></div>
+                     <div className="review"><p>read review</p></div>
+                     </div>
                 </li>
             ))
         }

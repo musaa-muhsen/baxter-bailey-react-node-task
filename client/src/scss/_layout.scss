@@ -1,0 +1,104 @@
+@import "_var-mixins";
+
+
+ul.thumbnails-container {
+    width: 1920px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    height: 1000px;
+    margin: 0 auto;
+    @media only screen and (max-width: 1500px) and (min-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        height: auto;
+        padding: 50px 0;
+    }
+    @media only screen and (max-width: 899px) {
+        grid-template-columns:  1fr;
+        height: auto;
+        row-gap: 40px;
+        padding: 50px 0;
+    }
+    @media only screen and (max-width: 599px) {
+        
+    }
+    //@media only screen and (max)
+   
+    
+
+li.card-container {
+   // outline: $black solid 1px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+    div {
+        cursor: pointer; 
+        width: 458px;
+        @media only screen and (max-width: 1500px) and (min-width: 900px) {
+            width: 400px;
+        }
+        @media only screen and (max-width: 458px) {
+            width: 97%;
+        }
+        div {
+            text-transform: capitalize;
+            //background: $greyDark;
+            height: 58px;
+            letter-spacing: 1.1px;
+            display: flex;
+            width: 100%;
+            p {
+                letter-spacing: 1.1px;
+                margin: auto;
+                font-size: 20px;
+                
+            }
+
+        }
+        .name {
+            background: $greyDark;
+            color: $white;
+
+        }
+        .review {
+            background: $white;
+            color: $greyDark;
+        }
+        // div:nth-child(3) {
+        //     text-transform: capitalize;
+        //     background: $white;
+        //     height: 58px;
+           
+        //     display: flex;
+        //     p {
+        //         letter-spacing: 1.1px;
+        //         margin: auto;
+        //         color: $greyDark;
+        //     }
+
+        // }
+        // button {
+        //     display: block;
+        //     background: $white;
+        //     border: none;
+        //     color: $greyDark;
+        //     text-align: center;
+        //     text-decoration: none;    
+        //     text-transform: capitalize;
+        //     height: 58px;
+        //     text-align: center;
+        //     width: 100%;
+        //     letter-spacing: 1.1px;
+        //     font-size: 22px;
+        //     cursor: pointer;
+
+        // }
+    }
+  
+
+}
+}
