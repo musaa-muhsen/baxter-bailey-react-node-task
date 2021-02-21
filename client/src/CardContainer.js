@@ -1,13 +1,30 @@
 import React, { useState} from 'react';
 //import useFetch from "./useFetch"
  
-const CardContainer = ({layoutData, setActive, isActive, setId}) => {
+const CardContainer = ({layoutData, setActive, isActive, setNewLayoutData, setSingle }) => {
     //const [id, setId] = useState(null);
 
 
- const handleClick = (x) => {
-    setId(x);
+
+ const handleClick = (idLocal) => {
+     
+    //setId(layoutData[idLocal].name);
     setActive(!isActive);
+    console.log(idLocal); //0
+   // console.log(layoutData[idLocal].name); // all
+   const single = layoutData.find(el => el.name == layoutData[idLocal].name); // using the find() method to match property names to single out as im used to using filter method on the unique id on the json    
+   console.log(single);
+   setSingle(single);
+
+
+     
+//    const data = layoutData.filter((thumb )=> {
+//         console.log(thumb)
+//       return thumb == idLocal
+
+//      }); 
+    //   console.log(data);
+    // setNewLayoutData(data)
  }
 
 
