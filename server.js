@@ -1,47 +1,38 @@
 const express = require('express');
 const app = express();
 const fetch = require('node-fetch');
-const path = require('path');
+const cors = require('cors');
+//const path = require('path');
 //require('dotenv').config()
+//app.use(express.static("public"));
+// app.use( (request, response, next) => {
+//   response.header("Access-Control-Allow-Origin", "*");
+//   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
+console.log(process.env.NODE_ENV)
 
-//console.log(process.env)
+if (process.env.NODE_ENV === "production"){
+   app.use(express.static("build"));
+   app.get("*", (req, res) => {
+     res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+   });
+ }
+//console.log(cors)
+app.use(cors())
 
+app.get("/api", (request, response) => {
+   response.sendFile(__dirname + "/json/reviews.json");
+ });
 //app.get('/api/images', async (req, res) => {
 
-app.get('/api/:word', async (req, res) => {
+// app.get('/end', async (request, response) => {
+//    //const number = request.params.number;
+//    const fetchResponse = await fetch(`http://localhost:3333/api/`);
+//    const data = await fetchResponse.json();
+//    response.json(data);
+// });
 
-  //const API_KEY = process.env.API_KEY;
-  const word = req.params.word;
-  console.log(word);
-   
-  // res.json(customers);
- // const imageURL = await fetch(`https://api.unsplash.com/search/photos?query=${word}&client_id=BgwLpezqvGtqHU5Q23sXjv0kJSebWvOoG_3fKA6ALOs`); 
-  const imageURL = await fetch(`https://api.unsplash.com/search/photos?per_page=30&query=${word}&client_id=BgwLpezqvGtqHU5Q23sXjv0kJSebWvOoG_3fKA6ALOs`); 
-
-   const data = await imageURL.json();
-   res.json(data)
-  //console.log(images)
-
-
-});
-
-// serve static assets if in production 
-if (process.env.NODE_ENV === 'production') {
-  // set static folder 
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
-const port = process.env.PORT || 5200;
-
+const port = process.env.PORT || 3333;
+//killall node
 app.listen(port, () => `Server running on port ${port}`);
-
-//console.log(process.env.PORT)
-  // const customers = [
-  //   {id: 1, firstName: 'John', lastName: 'Doe'},
-  //   {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-  //   {id: 3, firstName: 'Mary', lastName: 'Swanson'},
-  // ];
-

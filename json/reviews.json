@@ -1,0 +1,42 @@
+[
+	{
+		"name" : "We Love Falafel",
+		"location" : "Sydney Street",
+		"imageSrc" : "we-love-falafel.jpg",
+		"hours" : "11:00am - 5:30pm",
+		"vegan"   : "Yes",
+		"review" : "Great for lunch at around £4-6. Often busy but rarely more than a 10 minute wait. Food always freshly prepared. Limited seating inside although several tables available outside."
+	},
+	{
+		"name" : "Chilli Pickle",
+		"location" : "Jubilee Street",
+		"imageSrc" : "chilli-pickle.jpg",
+		"hours" : "5:30pm - 9:30pm",
+		"vegan" : "Yes",
+		"review" : "We came here with a couple of friends and my dad, for my Birthday back in November. It was lovely, not a huge menu so you didn't have to worry about too many options, a little pricey, but you pay for quality food."
+	},
+	{
+		"name" : "Pizzaface",
+		"location" : "Portland Road",
+		"imageSrc" : "pizzaface.jpg",
+		"hours" : "4pm - 10pm",
+		"vegan" : "Yes",
+		"review" : "My partner and I ordered pizzas through Delivroo, they came in about 20 mins and were absolutely delicious . The spelt bases are brilliant and they use fresh and plentiful ingredients."
+	},
+	{
+		"name" : "Yefsis",
+		"location" : "London Road",
+		"imageSrc" : "yefsis.jpg",
+		"hours" : "12pm - 11pm",
+		"vegan" : "Yes",
+		"review" : "Amazing gyros and pitas. Great vegan and veggie dishes as well, wife happy as her new year resolutions are well on track. Reasonable prices and great service."
+	},
+	{
+		"name" : "La Choza",
+		"location" : "Gloucester Road",
+		"imageSrc" : "la-choza.jpg",
+		"hours" : "4pm - 9pm",
+		"vegan" : "Yes",
+		"review" : "I just love this place. The food is the best, the cocktails amazing, and the team are so friendly and warm. Great vegan burrito."
+	}
+]
