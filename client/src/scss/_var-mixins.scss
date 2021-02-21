@@ -1,0 +1,16 @@
+$font1: "Helvetica Neue", Helvetica, sans-serif;
+
+$bold1: 700;
+$bold2: 600;
+
+$white: #fff;
+$greyLight: #EBEBEB;
+$greyMed: #707070;
+$greyDark: #212121;
+$black: #000;
+
+@mixin mobile {
+	@media all and (max-width: 1700px)  {
+       @content;
+	}
+}

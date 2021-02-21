@@ -8,9 +8,9 @@ function App() {
   const [isActive, setActive] = useState(false);
   const [single, setSingle] = useState(null);
   
- console.log(single);
+ //console.log(single);
   const [newLayoutData, setNewLayoutData] = useState(null);
-  const [test, setTest] = useState(null);
+  //const [test, setTest] = useState(null);
 
  
 
