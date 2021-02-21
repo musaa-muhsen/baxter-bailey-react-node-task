@@ -1,20 +1,40 @@
 import useFetch from './useFetch';
-import React , {useState} from 'react';
+import React, {useState}  from 'react';
 
 import CardContainer from './CardContainer';
-// import TestOne from './components/TestOne';
-// import UseRefTwo from './components/UseRefTwo';
-//import TestUseEffect from './components/TestUseEffect';
-//import TestUseEffectTwo from './components/TestUseEffectTwo';
+import SideBar from './SideBar';
 
 
+function App() {
+  const [isActive, setActive] = useState(false);
+  const [id, setId] = useState(null);
+  //console.log(id)
+  console.log(isActive)
 
- function App() {
 
   //const [layoutData, setLayoutdata] = useState()
 
   const {data : layoutData, isPending, error} = useFetch('http://localhost:3333/api/');
 console.log(layoutData);
+
+      return (   
+    <>  
+    <ul>
+    {error && <div>{error}</div>}
+    {isPending && <div>Loading...</div>}
+    {layoutData && <CardContainer setActive={setActive} isActive={isActive}  setId={setId} layoutData={layoutData} />}
+    </ul>
+     {isActive && <SideBar isActive={isActive} setActive={setActive} id={id} />} 
+   
+
+    </>
+)
+
+}
+
+
+export default App
+
 
 //  const layoutData =  async () => {    
     
@@ -28,20 +48,3 @@ console.log(layoutData);
 // const hello = layoutData();
 // hello.then( data =>
 //   console.log(data)
-// )
-      return (   
-    <>  
-    <ul>
-    {error && <div>{error}</div>}
-    {isPending && <div>Loading...</div>}
-    {layoutData && <CardContainer layoutData={layoutData} />}
-    </ul>
-   
-
-    </>
-)
-
-}
-
-
-export default App

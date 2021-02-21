@@ -1,10 +1,38 @@
-import React, {useRef} from 'react';
-   // const {isPending, data : blog, error} = useFetch('http://localhost:3005/blogs/' + id);
-    //import useFetch from "./useFetch"
+import React, { useState} from 'react';
+//import useFetch from "./useFetch"
+ 
+const CardContainer = ({layoutData, setActive, isActive, setId}) => {
+    //const [id, setId] = useState(null);
 
 
-const CardContainer = ({layoutData}) => {
-   // const {isPending, data : blog, error} = useFetch('http://localhost:3005/blogs/' + id);
+ const handleClick = (x) => {
+    setId(x);
+    setActive(!isActive);
+ }
+
+
+
+    return ( 
+       <>
+        {
+            layoutData.map((el, index) => (
+                <li onClick={() => handleClick(index)} className="card-container" id={index} key={index}>
+
+                     <img src={require(`./images/${el.imageSrc}`)} />
+                     <p>{el.name}</p>
+                     <button>read review</button>
+                </li>
+            ))
+        }
+</>
+
+     );
+}
+ 
+export default CardContainer; 
+
+//ref={inputRef}
+//e => setId(index)
 
     //const blogs = props.blogsProp;
     // props returns a object 
@@ -13,30 +41,12 @@ const CardContainer = ({layoutData}) => {
  // add the js functionanily from ws3 school 
  // we love falafel 
  // read review 
- const inputRef = useRef(null); 
+ //const inputRef = useRef(null); 
 
- console.log(inputRef)
- const handleClick = () => {
-     inputRef.current;
- }
- 
+//console.log(inputRef)
 
-    return ( 
-       <>
-        {
-            layoutData.map((el, index) => (
-                <li ref={inputRef} className="card-container" id={index} key={index}>
-                     <img src={require(`./images/${el.imageSrc}`)} />
-                     <p>{el.name}</p>
-                     <button onClick={handleClick}>read review</button>
-                </li>
-            ))
-        }
-   
+    //const {isPending, data : dataSingle, error} = useFetch('http://localhost:3333/api/');
 
-</>
+    
 
-     );
-}
- 
-export default CardContainer; 
+      // openNav();
