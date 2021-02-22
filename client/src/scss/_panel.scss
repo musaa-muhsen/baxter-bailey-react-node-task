@@ -1,10 +1,9 @@
 @import "_var-mixins";
 
-
 .overlay {
     position: fixed; 
     width: 100%; 
-    height: 100%; 
+    height: auto; 
     top: 0;
     left: 0;
     right: 0;
@@ -12,16 +11,19 @@
     background: rgba($greyDark, 0.85);
     z-index: 200; 
     .sidebar-main-container {
-        position: absolute;
+        //overflow: auto;
+       //display: block;
+       position: absolute;
+       height: 100%;
         top: 0;
         right: 0;
-        height: 100vh;
         width: 50%;
         background: $greyDark;
         @media all and (max-width: 1000px) {
             width: 100%;
            }
          article.sidebar-top-container {
+
         //    display: flex;
         //    flex-direction: column;
         //    margin: 10px auto;
@@ -48,7 +50,7 @@
                 margin: 20px 0; 
                }
                @media all and (max-width: 800px) {
-                margin: 10px 0; 
+                margin: 12px 0; 
                }
              .close-btn {
                  //margin-right: 30px;
@@ -70,7 +72,11 @@
            }     
          }
         .sidebar-info-list {
+            margin-top: 17px;
             color: $white;
+            @media all and (max-width: 600px) {
+                margin-top: 10px;
+            }
             li {
 
                 //outline: red solid 1px;
@@ -79,19 +85,47 @@
             li:first-child {
                 padding: 10px 0;
                 font-size: 34px;
+                @media all and (max-width: 600px) {
+                    font-size: 26px;
+                    padding: 5px 0;
+                }
+
             }
             li:nth-child(2) , li:nth-child(3), li:nth-child(4){
               //background: red;
               font-size: 22px;
               padding: 15px 0;
+              @media all and (max-width: 600px) {
+                  font-size: 16px;
+                  padding: 10px 0;
+              }
             }
             li:last-child {
                 .reviewTitle {
                     padding: 20px 0;
+                    font-size: 22px;
+                    @media all and (max-width: 1000px) {
+                        font-size: 18px;
+                        padding: 10px 0;
+                    }
+
                 }
                 .reviewDetails {
                     font-size: 16px;
                     width: 497px;
+                    @media all and (max-width:1200px) {
+                      width: 80%;
+                    }
+                    @media all and (max-width:1200px) {
+                        width: 100%;
+                      }
+                      @media all and (max-width:600px) {
+                       height: 84px;
+                       overflow: auto;
+                      }
+
+
+
 
                 }
 

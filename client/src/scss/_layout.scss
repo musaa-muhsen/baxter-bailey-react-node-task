@@ -52,10 +52,17 @@ li.card-container {
             letter-spacing: 1.1px;
             display: flex;
             width: 100%;
+            @media all and (max-width:800px) {
+                height: 45px;
+            }
+
             p {
                 letter-spacing: 1.1px;
                 margin: auto;
                 font-size: 20px;
+                @media all and (max-width:800px) {
+                    font-size: 18px;
+                }
                 
             }
 
@@ -72,6 +79,7 @@ li.card-container {
         .name {
             background: $greyDark;
             color: $white;
+
 
         }
         .review {
