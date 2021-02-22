@@ -29,7 +29,8 @@ ul.thumbnails-container {
     
 
 li.card-container {
-   // outline: $black solid 1px;
+    overflow: hidden;
+    
    
     display: flex;
     justify-content: center;
@@ -42,7 +43,7 @@ li.card-container {
             width: 400px;
         }
         @media only screen and (max-width: 458px) {
-            width: 97%;
+            width: 95%;
         }
         div {
             text-transform: capitalize;
@@ -59,6 +60,15 @@ li.card-container {
             }
 
         }
+        .zoom {
+            transform: scale(1);
+            transition: transform .3s ease-in-out; 
+            &:hover {
+                transform: scale(1.2);
+ 
+            }
+        }
+
         .name {
             background: $greyDark;
             color: $white;
@@ -67,6 +77,9 @@ li.card-container {
         .review {
             background: $white;
             color: $greyDark;
+            &:hover {
+                background: rgba($greyDark ,0.1)
+            }
         }
         // div:nth-child(3) {
         //     text-transform: capitalize;
