@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production"){
 //console.log(cors)
 app.use(cors())
 
-app.get("/api", (request, response) => {
+app.get("/api/", (request, response) => {
    response.sendFile(__dirname + "/json/reviews.json");
  });
 //app.get('/api/images', async (req, res) => {

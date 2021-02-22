@@ -17,7 +17,7 @@ function App() {
   //const [layoutData, setLayoutdata] = useState()
   
   //"proxy": "http://localhost:5003"
-  const {data : layoutData, isPending, error} = useFetch('/api/');
+  const {data : layoutData, isPending, error} = useFetch('/api');
   // console.log(newLayoutData);
   // console.log(layoutData);
   
