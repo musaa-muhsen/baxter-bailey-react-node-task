@@ -5,5 +5,5 @@ link to the task - [https://baxter-and-bailey-task.herokuapp.com/](https://baxte
 ## How To Set Up
 
 ```jsx
-npm run dev // at the root directory inside of cli to start up server and client 
+npm run dev // at the root directory of the folder inside of cli to start up server and client 
 ```
