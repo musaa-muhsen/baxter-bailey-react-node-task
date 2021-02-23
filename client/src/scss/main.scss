@@ -29,13 +29,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media all and (max-width: 1000px) {
+          height: 60px;
+    }
 
     h1 {
         letter-spacing: 1.4px;
         text-transform: uppercase;
         font: normal 400 28px $font1;
         color: $greyDark;
-      
+        @media all and (max-width: 1000px) {
+          font-size: 20px;
+        }
     }
 }
 
