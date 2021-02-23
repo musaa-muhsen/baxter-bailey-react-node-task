@@ -2,7 +2,7 @@
 
 link to the task - [https://baxter-and-bailey-task.herokuapp.com/](https://baxter-and-bailey-task.herokuapp.com/) 
 
-## How to set up from local
+## How to set up from local enviroment 
 
 ```jsx
 // firstly 
