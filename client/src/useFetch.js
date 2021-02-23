@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-
+// custom hook 
 const useFetch = (url) => {
 
     // null = no value or [] as default 
