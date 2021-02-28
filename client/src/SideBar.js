@@ -16,9 +16,9 @@ export default function SideBar({single, setActive, isActive}) {
     return (
         <div onClick={handleClick} className="overlay">
           <div className="sidebar-main-container">
-            <article class="sidebar-top-container">
+            <article className="sidebar-top-container">
                <div className="make-center">
-                   <div className="close-container"><span  class="close-btn">
+                   <div className="close-container"><span  className="close-btn">
                    <img aria-label="close" src={require('./images/x.svg')} alt={'close'}/>
                      </span></div>
                    <img   src={require(`./images/${single.imageSrc}`)} alt={single.imageSrc}/>
